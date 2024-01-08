@@ -1,6 +1,7 @@
 <?php
 
-require_once "views/register.php";
+// require_once "views/register.php";
+require_once "views/login.php";
 require_once "core/Request.php";
 
 // $newrequest = new Request();

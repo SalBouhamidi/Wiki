@@ -1,6 +1,5 @@
 <?php
     require_once "includes/navbar.php";
-    $test= "Testing the layout";
     
    
     ob_start();
