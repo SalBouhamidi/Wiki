@@ -1,3 +1,5 @@
-<h1>
-    header
-</h1>
+<?php
+    require "includes/navbar.php";
+    require "layout.php";
+
+?>
