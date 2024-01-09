@@ -31,8 +31,8 @@
             <div class="mb-3 ">
                 <label class="form-label text-light fw-semibold ">Role</label>
                 <select id="role" name="role" class="w-100 py-2 rounded border-none bg-body-secondary">
-                    <option value="author">Author</option>
-                    <option value="admin">Admin</option>
+                    <option value="<?= 1?>">Author</option>
+                    <option value="<?= 2?>">Admin</option>
                 </select>
             </div>
             <div class="d-flex justify-content-center">

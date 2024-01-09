@@ -1,6 +1,5 @@
 <?php
 
-require "views/register.php";
 require_once "./Models/AuthentificationModel.php";
 
 
@@ -16,6 +15,7 @@ class RegistreController{
         $this->modelobj = new AuthentificationModel();
     }
     public function register(){
+        require "views/register.php";
         if(isset($_POST['submit']))
         {
             $name= $_POST['name'];
@@ -24,9 +24,9 @@ class RegistreController{
             $repeatpwd= $_POST['repeatpwd'];
             $role= $_POST['role'];
 
-
-            $this->modelobj->RegisterRequete("users",["fullname","email","pwd","repeatpwd"],
-            ["$name","$email", "$pwd","$repeatpwd"]);
+            $this->modelobj->RegisterRequete("users",["fullname","email","pwd","repeatpwd","id_role"],
+            ["$name","$email", "$pwd","$repeatpwd","$role"]);
+            
         }
     }
 

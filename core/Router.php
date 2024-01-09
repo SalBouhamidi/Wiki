@@ -8,13 +8,16 @@ function pagenotfound()
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
     if($uri === '/'){
-        require "controllers/index.php";
+        require "controllers/homecontroller.php";
     }else if ($uri === '/register'){
         require "controllers/RegistreController.php";
     }
     else if($uri === '/login'){
-        require "controllers/loginController.php";
-    } else {
+        require "controllers/LoginController.php";
+    }else if($uri === '/admin'){
+        require "controllers/dashboardAdmincontroller.php.php";
+    }
+     else {
         pagenotfound();
     }
 

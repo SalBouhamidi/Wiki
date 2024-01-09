@@ -1,6 +1,6 @@
 <?php
 
-class Connectdb{
+class Connectdb{ 
     private $host= "localhost";
     private $name= "root";
     private $pwd= "";
