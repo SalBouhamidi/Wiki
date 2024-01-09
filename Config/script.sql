@@ -1,18 +1,18 @@
 CREATE DATABASE wiki;
 CREATE TABLE role(
-	id int PRIMARY key,
+	id int AUTO_INCREMENT PRIMARY key,
     role_type varchar(255)
 );
 CREATE TABLE category(
-	id int PRIMARY key,
+	id int AUTO_INCREMENT PRIMARY key,
     name varchar(255)
 );
 create table tag(
-	id int PRIMARY key,
+	id int AUTO_INCREMENT PRIMARY key,
     tag varchar(255)
 );
 create table users(
-	id int PRIMARY key,
+	id int AUTO_INCREMENT PRIMARY key,
     fullname varchar(255),
     email text,
     pwd text,
@@ -21,7 +21,7 @@ create table users(
     FOREIGN KEY (id_role) REFERENCES role(id)
 );
 create table wiki(
-	id int PRIMARY key,
+	id int AUTO_INCREMENT PRIMARY key,
     wiki_name varchar(255),
     content text,
     category text,

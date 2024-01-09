@@ -23,7 +23,7 @@
             <div class="d-flex justify-content-center">
             <button type="submit" class="btn rounded-0 text-light fw-semibold px-4 ">Log in</button></div>
             
-            <p class="d-flex justify-content-end text-light fw-semibold">You don't have an account ?<a class="text-light" href="register.php">Register here</a></p>
+            <p class="d-flex justify-content-end text-light fw-semibold">You don't have an account ?<a class="text-light" href="<?= $uri = '/register';?>">Register here</a></p>
         
             </form>
 

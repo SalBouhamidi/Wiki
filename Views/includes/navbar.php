@@ -10,7 +10,7 @@
         <a class="nav-link fw-semibold text-light me-5" href="#">Catégories</a>
         <a class="nav-link fw-semibold text-light me-5" href="#">Tags</a>
         <a class="nav-link fw-semibold text-light me-5 " href="#">Wikis</a>
-        <a href="" class="btn  px-4 text-light fw-bold ms-5 me-3">Log in</a>
+        <a href="<?= $uri = '/login';?>" class=" btn  px-4 text-light fw-bold ms-5 me-3">Log in</a>
       </div>
     </div>
   </div>
