@@ -1,9 +1,11 @@
 <?php
 
 require_once "./Models/AuthentificationModel.php";
+require_once "Controller.php";
 
 
-class RegistreController{
+class RegistreController extends Controller{
+
     private $name;
     private $email;
     private $pwd;
@@ -14,10 +16,19 @@ class RegistreController{
     public function __construct(){
         $this->modelobj = new AuthentificationModel();
     }
+
+
     public function register(){
-        require "views/register.php";
+        $this->renderview('register');
+    }
+
+
+    public function registeration()
+    {
+
         if(isset($_POST['submit']))
         {
+
             $name= $_POST['name'];
             $email= $_POST['email'];
             $pwd= $_POST['pwd'];
@@ -31,7 +42,10 @@ class RegistreController{
     }
 
 }
+
+
 $test= new RegistreController();
 $test->register();
+$test->registeration();
 
 ?>

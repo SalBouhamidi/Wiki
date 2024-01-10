@@ -56,10 +56,12 @@
         <a href="" class="btn text-light fw-semibold px-4 ">Plus de wikies</a>
     </div>
     <div class="d-flex justify-content-between flex-lg-wrap flex-wrap ">
-        <a href="" class="btn btn-danger text-light px-5" >Marketing</a>
-        <a href="" class="btn btn-danger text-light px-5" >Marketing</a>
-        <a href="" class="btn btn-danger text-light px-5" >Marketing</a>
+        <?php 
+
+        foreach($results as $result):?>
+        <a href="" class="btn btn-danger text-light px-5" ><?= $result['category.name']; ?></a>
     </div>
+    <?php endforeach; ?>
 </section>
 
 

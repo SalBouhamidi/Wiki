@@ -1,17 +1,22 @@
 <?php
 
-require "views/login.php";
+// require "views/login.php";
 require_once "./Models/AuthentificationModel.php";
+require_once "Controller.php";
 session_start();
 // require "./core/Router.php";
 
-class LoginController{
+class LoginController extends Controller{
     private $email;
     private $pwd;
 
     public function __construct(){
         $this->modelobject = new AuthentificationModel();
      
+    }
+
+    public function login(){
+        $this->renderview('login');
     }
 
     public function Logincntrl(){
@@ -56,6 +61,7 @@ class LoginController{
 
 
 $test= new LoginController();
+$test->login();
 $test->Logincntrl()
 
 
