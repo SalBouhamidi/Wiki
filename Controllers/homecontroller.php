@@ -23,7 +23,7 @@ Class HomeController extends Controller
             $tags = $this->getTag();
             $this->renderview('home', ['categories' => $categories,
                                         'wikis' => $wikis,
-                                        'tags'=> $tags ]);
+                                        'tags'=> $tags]);
     }
 
     public function getCategory()
@@ -32,6 +32,7 @@ Class HomeController extends Controller
         return $categories;
     }
 
+
     public function getTag()
     {
         $tags = $this->objModel->getElements('tag','id', '6');
@@ -39,7 +40,6 @@ Class HomeController extends Controller
     }
 
  
-
     public function getWikis(){
         $wikis = $this->objModel->getElementsJoins('wiki.wiki_name','users.fullname', 'wiki', 'users', 'wiki.id_user','users.id', 'wiki.id','4');
         return $wikis;
