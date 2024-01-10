@@ -1,7 +1,6 @@
 <?php
     require_once "includes/navbar.php";
     
-   
     ob_start();
 ?>
  <div class="d-flex justify-content-center mt-4">

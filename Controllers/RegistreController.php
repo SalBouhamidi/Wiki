@@ -4,7 +4,8 @@ require_once "./Models/AuthentificationModel.php";
 require_once "Controller.php";
 
 
-class RegistreController extends Controller{
+class RegistreController extends Controller
+{
 
     private $name;
     private $email;
@@ -13,12 +14,15 @@ class RegistreController extends Controller{
     private $role;
     public $modelobj;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->modelobj = new AuthentificationModel();
+        
     }
 
 
-    public function register(){
+    public function register()
+    {
         $this->renderview('register');
     }
 
