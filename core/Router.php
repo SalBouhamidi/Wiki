@@ -20,6 +20,10 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
         require "controllers/WikiDetailsController.php";
     }else if($uri === '/admin/CategoryAdmin'){
         require "controllers/CategoryAdmin.php";
+    }else if($uri === '/admin/ModifyTag'){
+        require "controllers/ModifyTag.php";
+    }else if($uri === '/admin/ModifyCategory'){
+        require "controllers/ModifyCategory.php";
     }else if($uri === '/admin/TagAdmin'){
         require "controllers/TagAdmin.php";
     }

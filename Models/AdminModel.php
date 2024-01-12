@@ -18,6 +18,13 @@ Class AdminModel{
         $results = $stmt->fetchAll();
         return $results;
     }
+    public function showOneElement($table, $condition){
+        $connect= $this->connectionobj->connexion();
+        $stmt= $connect->prepare("SELECT * FROM `{$table}` where $condition");
+        $stmt->execute();
+        $results = $stmt->fetch();
+        return $results;
+    }
 
     public function showElementJoin($table1,$table2, $att1,$att2,$order, $as){
         $connect= $this->connectionobj->connexion();
@@ -40,6 +47,7 @@ Class AdminModel{
         $valuesimploded= implode("','",$values);
         $connect= $this->connectionobj->connexion();
         $stmt= $connect->prepare("INSERT INTO `$table` (`{$arrtimploded}`) VALUES ('{$valuesimploded}')");       
+        
         $stmt->execute();
         return $stmt;
      }
@@ -47,17 +55,20 @@ Class AdminModel{
      public function delete($table, $condition){
         $connect= $this->connectionobj->connexion();
         $deleterequete= $connect->prepare("DELETE FROM `{$table}` WHERE {$condition}");
-        // var_dump($deleterequete);
-        // die();
         $deleterequete->execute();
         return $deleterequete;
      }
 
-     public function update($table, $attributes, $values){
-        $connect= $this->connectionobj->connexion();
+    public function update($table, $attributes, $values,$condition){
         $arrtimploded= implode("`,`",$attributes );
-     
+       
+        $valuesimploded= implode("','",$values);
+        $connect= $this->connectionobj->connexion();
+        $stmt= $connect->prepare("UPDATE `$table` SET `{$arrtimploded}`='{$valuesimploded}' WHERE {$condition}");    
+        $stmt->execute();
+        return $stmt;
      }
+
     
 }
 

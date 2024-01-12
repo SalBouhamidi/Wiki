@@ -29,7 +29,8 @@ Class CategoryAdmin extends Controller
     }
 
     public function Delete(){
-        if(isset($_GET['id'])){
+        if(isset($_GET['id']))
+        {
             $id= $_GET['id'];
             $results = $this->objModel->delete('category',"id = $id");
             header('Location: \admin');
