@@ -2,8 +2,11 @@
 require_once "./Models/WikiDetailsModel.php";
 require_once "Controller.php";
 
-Class WikiDetailsController extends Controller{
+Class WikiDetailsController extends Controller
+{
     public $modelobj;
+
+    
     public function __construct(){
         $this->modelobj= new WikiDetailsModel();
     }

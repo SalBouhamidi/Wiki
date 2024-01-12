@@ -30,9 +30,7 @@
         <div class="card text-light mb-3" style="width: 18rem;">
             <div class="card-body">
                 <p class="card-title fw-bold">Title : <?= $wiki['wiki_name']; ?></p>
-                <p class="card-title fw-bold">testin : <?= $wiki['ASid']; ?></p>
                 <p class="card-text fw-semibold">Author's name : <?= $wiki['fullname']; ?></p>
-                <p></p>
                 <a href="<?= $uri = '/wikidetails'?>?id=<?php echo $wiki['ASid'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4">Lire plus</a>
             </div>
         </div>

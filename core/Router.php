@@ -15,7 +15,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
     else if($uri === '/login'){
         require "controllers/LoginController.php";
     }else if($uri === '/admin'){
-        require "controllers/dashboardAdmincontroller.php";
+        require_once "controllers/Admincontroller.php";
     }else if($uri === '/wikidetails'){
         require "controllers/WikiDetailsController.php";
     }else {

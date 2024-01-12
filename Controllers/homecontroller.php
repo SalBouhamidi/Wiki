@@ -6,8 +6,7 @@ require_once "Controller.php";
 
 Class HomeController extends Controller
 {
-    private $id;
-    private $name;
+   
     public $objModel;
 
 
