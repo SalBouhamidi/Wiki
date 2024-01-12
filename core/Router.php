@@ -35,7 +35,7 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
     }else if($uri === '/admin/TagAdmin')
     {
         require "controllers/TagAdmin.php";
-    }else if($uri === '/Author')
+    }else if($uri === '/author')
     {
         require "controllers/AuthorController.php";
     }

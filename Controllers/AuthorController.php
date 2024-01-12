@@ -19,5 +19,5 @@ Class AuthorController extends Controller
 }
 
 $test = new AuthorController();
-$test->Author
+$test->Author();
 ?>
