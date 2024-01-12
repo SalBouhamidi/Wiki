@@ -22,6 +22,8 @@ Class WikiDetailsController extends Controller
     public function getDetails(){
         $id= $_GET['id'];
         $results = $this->modelobj->Wikidetails($id);
+        // var_dump($results);
+        // die;
     
         
         return $results;

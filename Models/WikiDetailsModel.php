@@ -20,11 +20,9 @@
                                         INNER JOIN `category` ON wiki.id_category = category.id
                                         INNER JOIN `users` ON wiki.id_user = users.id
                                         where wiki.id = $id");
-            var_dump($statement);
-            die();
 
             $statement->execute();
-            $results = $statement->fetch();
+            $results = $statement->fetchALL();
             return $results;
         }
 
