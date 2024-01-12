@@ -34,20 +34,23 @@ Class AdminModel{
 
 
 
-    public function insert($table, $attributes, $values){
-        $connect= $this->connectionobj->connexion();
+    public function insert($table, $attributes, $values)
+    {
         $arrtimploded= implode("`,`",$attributes );
         $valuesimploded= implode("','",$values);
-        $stmt= $this->connect->prepare("INSERT INTO {$table} (`{$arrtimploded}`) VALUES ('{$valuesimploded}')");
-       
+        $connect= $this->connectionobj->connexion();
+        $stmt= $connect->prepare("INSERT INTO `$table` (`{$arrtimploded}`) VALUES ('{$valuesimploded}')");       
         $stmt->execute();
         return $stmt;
      }
 
      public function delete($table, $condition){
         $connect= $this->connectionobj->connexion();
-        $deleterequete= $this->connect->prepare("DELETE FROM {$table} WHERE {$condition}");
+        $deleterequete= $connect->prepare("DELETE FROM `{$table}` WHERE {$condition}");
+        // var_dump($deleterequete);
+        // die();
         $deleterequete->execute();
+        return $deleterequete;
      }
 
      public function update($table, $attributes, $values){

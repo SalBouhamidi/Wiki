@@ -18,7 +18,12 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
         require_once "controllers/Admincontroller.php";
     }else if($uri === '/wikidetails'){
         require "controllers/WikiDetailsController.php";
-    }else {
+    }else if($uri === '/admin/CategoryAdmin'){
+        require "controllers/CategoryAdmin.php";
+    }else if($uri === '/admin/TagAdmin'){
+        require "controllers/TagAdmin.php";
+    }
+    else {
         pagenotfound();
     }
 

@@ -24,7 +24,7 @@
             
             <p class="d-flex justify-content-end text-light fw-semibold">You don't have an account ?<a class="text-light" href="<?= $uri = '/register';?>">Register here</a></p>
         
-            </form>
+</form>
 
 </div>
 
