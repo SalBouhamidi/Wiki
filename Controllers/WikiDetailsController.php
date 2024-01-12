@@ -10,22 +10,25 @@ Class WikiDetailsController extends Controller
     public function __construct(){
         $this->modelobj= new WikiDetailsModel();
     }
-    
+
+
+
     public function details(){
-        // $this->Modelobj->Wikidetails();
-        $results = $this->modelobj->getDetails();
-        $this->renderview('/wikidetails', ['results' => $results]);
+        $results= $this->getDetails();
+
+        $this->renderview('wikidetails', ['results' => $results]);
     }
 
     public function getDetails(){
         $id= $_GET['id'];
-        $results = $this->modelobj->Wikidetails($id);        
-        var_dump($results);
-        die();
+        $results = $this->modelobj->Wikidetails($id);
+    
+        
         return $results;
         
     }
 
+    
 
 } 
 

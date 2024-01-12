@@ -38,7 +38,6 @@
     <div class="d-flex justify-content-between mb-4">
         <h4 class="fw-bold">Les wikis : </h4>
     </div>
-
     <div class="d-flex flex-row justify-content-between flex-lg-wrap flex-wrap ">
     <?php 
     foreach($wikies as $wiki):?>
@@ -52,7 +51,6 @@
         </div>
         <?php endforeach; ?>
     </div>
-
 </section>
 
 <section class="tags  container">

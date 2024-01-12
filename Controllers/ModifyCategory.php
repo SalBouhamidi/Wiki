@@ -20,7 +20,7 @@ Class ModifyCategory extends Controller
         $id= $_GET['id'];
         if(isset($_POST['modify']))
         {
-            $name = $_POST['category'];
+            $name = $_POST['name'];
             $modifycategory = $this->objModel->update('category',['name'],[$name],"id = $id");
             header('Location: \admin');
         }
@@ -30,7 +30,7 @@ Class ModifyCategory extends Controller
    public function show()
    {
         $id= $_GET['id'];
-        $showcategory= $this->objModel->showOneElement('category', $id);
+        $showcategory= $this->objModel->showOneElement('category', "id = $id");
         return $showcategory;
    }
 
