@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
     <a class="navbar-brand text-light fw-bold fs-4" href="/">Wi<span class="text-dark">ki</span></a>
@@ -10,7 +13,8 @@
         <a class="nav-link fw-semibold text-light me-5" href="#">Catégories</a>
         <a class="nav-link fw-semibold text-light me-5" href="#">Tags</a>
         <a class="nav-link fw-semibold text-light me-5 " href="#">Wikis</a>
-        <a href="<?= $uri = '/login';?>" class=" btn btn-danger px-4 text-light fw-bold ms-5 me-3">Log in</a>
+          <a href="<?= $uri = '/login';?>" class=" btn btn-danger px-4 text-light fw-bold ms-5 me-3">Log in</a>
+        
       </div>
     </div>
   </div>

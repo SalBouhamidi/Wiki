@@ -1,9 +1,7 @@
 <?php
-
-
 require_once "./Models/AuthentificationModel.php";
 require_once "Controller.php";
-session_start();
+// session_start();
 
 class LoginController extends Controller{
     private $email;
@@ -43,8 +41,7 @@ class LoginController extends Controller{
                     $_SESSION["pwd"]=$_POST['password'];
                     $_SESSION["id_role"]= $checkobj['id_role'];
                     $_SESSION["name"]= $checkobj['fullname'];
-                    
-
+                    $_SESSION['logged in'] = true; 
                     if($checkobj['id_role'] == 1)
                     {
                         header("Location: /");
@@ -57,6 +54,7 @@ class LoginController extends Controller{
                    
                 }else
                 {
+                    // $_SESSION['logged in'] = false;
                     echo "Nooot";
                 }
 

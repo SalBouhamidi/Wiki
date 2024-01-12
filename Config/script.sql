@@ -18,7 +18,7 @@ create table users(
     pwd text,
     repeatpwd text, 
     id_role int, 
-    FOREIGN KEY (id_role) REFERENCES role(id)
+    FOREIGN KEY (id_role) REFERENCES role(id),
 );
 create table wiki(
 	id int AUTO_INCREMENT PRIMARY key,
@@ -31,4 +31,8 @@ create table wiki(
     id_category int,
     FOREIGN KEY (id_user) REFERENCES users(id),
     FOREIGN KEY (id_category) REFERENCES category(id)
+);
+CREATE TABLE wiki_tag(
+    id_wiki int,
+    id_tag int
 );

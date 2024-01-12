@@ -23,15 +23,15 @@ class HomeModel{
     }
 
 
-    public function getElementsJoins($att1,$att2,$table1,$table2, $att3,$att4,$att5,$repeat){
+    public function getElementsJoins($table1,$table2, $att1,$att2,$order, $as,$repeat){
         $connect= $this->connectionobj->connexion();
-        $stmt=$connect->prepare("SELECT $att1, $att2
+        $stmt=$connect->prepare("SELECT $order AS $as, $table1.*, $table2.*
                                 FROM `{$table1}`
-                                INNER JOIN `{$table2}` ON $att3 = $att4
-                                ORDER By $att5 DESC 
+                                INNER JOIN `{$table2}` ON $att1 = $att2
+                                ORDER By $as  DESC 
                                 LIMIT $repeat");
-        
-
+       
+                                
         $stmt->execute();
         $results = $stmt->fetchAll();
         return $results;

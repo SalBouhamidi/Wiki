@@ -41,7 +41,7 @@ Class HomeController extends Controller
 
  
     public function getWikis(){
-        $wikis = $this->objModel->getElementsJoins('wiki.wiki_name','users.fullname', 'wiki', 'users', 'wiki.id_user','users.id', 'wiki.id','4');
+        $wikis = $this->objModel->getElementsJoins( 'wiki', 'users', 'wiki.id_user','users.id', 'wiki.id','ASid','4');
         return $wikis;
     }
 
