@@ -44,7 +44,7 @@ class LoginController extends Controller{
                     $_SESSION['logged in'] = true; 
                     if($checkobj['id_role'] == 1)
                     {
-                        header("Location: /");
+                        header("Location: /Author");
                     }else if($checkobj['id_role'] == 2)
                     {
                         header("location: /admin");

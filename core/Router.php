@@ -7,25 +7,37 @@ function pagenotfound()
 }
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
-    if($uri === '/'){
+    if($uri === '/')
+    {
         require "controllers/homecontroller.php";
-    }else if ($uri === '/register'){
+    }else if ($uri === '/register')
+    {
         require "controllers/RegistreController.php";
     }
-    else if($uri === '/login'){
+    else if($uri === '/login')
+    {
         require "controllers/LoginController.php";
-    }else if($uri === '/admin'){
+    }else if($uri === '/admin')
+    {
         require_once "controllers/Admincontroller.php";
-    }else if($uri === '/wikidetails'){
+    }else if($uri === '/wikidetails')
+    {
         require "controllers/WikiDetailsController.php";
-    }else if($uri === '/admin/CategoryAdmin'){
+    }else if($uri === '/admin/CategoryAdmin')
+    {
         require "controllers/CategoryAdmin.php";
-    }else if($uri === '/admin/ModifyTag'){
+    }else if($uri === '/admin/ModifyTag')
+    {
         require "controllers/ModifyTag.php";
-    }else if($uri === '/admin/ModifyCategory'){
+    }else if($uri === '/admin/ModifyCategory')
+    {
         require "controllers/ModifyCategory.php";
-    }else if($uri === '/admin/TagAdmin'){
+    }else if($uri === '/admin/TagAdmin')
+    {
         require "controllers/TagAdmin.php";
+    }else if($uri === '/Author')
+    {
+        require "controllers/AuthorController.php";
     }
     else {
         pagenotfound();
