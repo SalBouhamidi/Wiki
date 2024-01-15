@@ -60,11 +60,13 @@
     </div>
     <?php 
     foreach($categories as $category):?>
-    <div class="d-flex justify-content-center flex-lg-wrap flex-wrap ">
-        <a href="<?= $uri = '/admin/ModifyCategory'?>?id=<?php echo $category['id'];?>"><button class="btn btn-dark text-light px-5 mx-2 my-2">Modifier</button></a>
-        <a href="" class="btn btn-danger text-light px-5 w-50 mx-2 my-2" ><?= $category['name']; ?></a>
-        <a href="<?= $uri = '/admin/CategoryAdmin'?>?id=<?php echo $category['id'];?>"><button class="btn btn-dark text-light px-5 mx-2 my-2">Supprimer</button></a>
-    </div>
+         
+                     <div class="d-flex justify-content-center flex-lg-wrap flex-wrap ">
+                    <a href="<?= $uri = '/admin/ModifyCategory'?>?id=<?php echo $category['id'];?>"><button class="btn btn-dark text-light px-5 mx-2 my-2">Modifier</button></a>
+                    <a href="" class="btn btn-danger text-light px-5 w-50 mx-2 my-2" ><?= $category['name']; ?></a>
+                    <a href="<?= $uri = '/admin/CategoryAdmin'?>?id=<?php echo $category['id'];?>"><button class="btn btn-dark text-light px-5 mx-2 my-2">Supprimer</button></a>
+        </div>
+
     <?php endforeach; ?>
    
 </section>

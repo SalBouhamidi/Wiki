@@ -28,8 +28,9 @@ public function AddTag(){
         }
     }
     $this->renderview('AddTag');
-
 }
+
+
 public function Delete(){
     if(isset($_GET['id'])){
         $id= $_GET['id'];

@@ -41,6 +41,8 @@ class LoginController extends Controller{
                     $_SESSION["pwd"]=$_POST['password'];
                     $_SESSION["id_role"]= $checkobj['id_role'];
                     $_SESSION["name"]= $checkobj['fullname'];
+                    $_SESSION["id_user"]= $checkobj['id'];
+
                     $_SESSION['logged in'] = true; 
                     if($checkobj['id_role'] == 1)
                     {

@@ -10,13 +10,15 @@ Class CategoryAdmin extends Controller
     public function __construct(){
         $this->objModel = new AdminModel();
     }
+
     public function Category(){
         $this->AddCategory();
         $this->Delete();
         
     }
 
-    public function AddCategory(){
+    public function AddCategory()
+    {
         
         if(isset($_POST['addcategory'])){
             $name =$_POST['category'];

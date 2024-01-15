@@ -37,10 +37,6 @@ Class AdminModel{
 
 
     }
-
-
-
-
     public function insert($table, $attributes, $values)
     {
         $arrtimploded= implode("`,`",$attributes );
