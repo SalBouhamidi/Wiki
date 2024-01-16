@@ -33,11 +33,9 @@ Class AddWikiController extends Controller
             $results = $this->objModel->insert('wiki',['wiki_name', 'content', 'archive', 'id_category', 'id_user'],
                                     [$title,$content,$archive,$category, $id]);
             
-            $max = $this->getWiki();
-            var_dump($max);
-            die();                    
             foreach($_POST['tag_name'] as $tag){
-            $wikipivo = $this->objModel->insert('wiki_tag', ['id_wiki', 'id_tag'], [$id,$tag]);
+            $lastwiki = $this->getLastWiki();
+            $wikipivo = $this->objModel->insert('wiki_tag', ['id_wiki', 'id_tag'], [$lastwiki,$tag]);
             }
             if(isset($results)){
                 header('Location: /author');
@@ -51,10 +49,11 @@ Class AddWikiController extends Controller
         return $categories;
     }
 
-    public function getWiki(){
+    public function getLastWiki(){
         $wikis= $this->objModel->showElement('wiki');
-        $max= max();
-        return $wikis;
+        $lastwiki= max($wikis);
+        $lastidwiki=$lastwiki['id'] ;
+        return $lastidwiki;
     }
 
     public function getTag(){

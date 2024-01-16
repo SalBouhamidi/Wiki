@@ -14,14 +14,14 @@ ob_start();
 
     </div>
 
-    <?php foreach($results as $result) :?>
 
-    <div class="d-flex flex-row justify-content-between flex-lg-wrap flex-wrap ">
+    <div class="d-flex flex-row justify-content-between flex-lg-wrap flex-wrap ">    
+        <?php foreach($results as $result) :?>
         <div class="card text-light mb-3" style="width: 18rem;">
             <div class="card-body">
                 <p class="card-title fw-bold">Title : <?= $result ["wiki_name"] ;?> </p>
                 <a href="<?= $uri = '/author'?>?id=<?php echo $result['id'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4 mb-4">Supprimer</a>
-                <a href="" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4 ">Modifier</a>
+                <a href="<?= $uri = '/author/modify'?>?id=<?php echo $result['id'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4 ">Modifier</a>
             </div>
         </div>
     <?php endforeach; ?>

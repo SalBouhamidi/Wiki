@@ -41,6 +41,9 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
     }else if($uri === '/author/addWiki')
     {
         require "controllers/AddWikiController.php";
+    }else if($uri === '/author/modify')
+    {
+        require "controllers/ModifyWiki.php";
     }
     else {
         pagenotfound();
