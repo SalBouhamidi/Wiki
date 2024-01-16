@@ -18,3 +18,11 @@
     background-color: rgba(209, 23, 23, 1);
     margin-left: 12%;
 }
+
+@media (max-width:600px){
+    .nav-item{
+        display: flex;
+        justify-content:start;
+    
+    }
+}

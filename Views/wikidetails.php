@@ -9,12 +9,17 @@
     <a href="" class="btn btn-danger text-light fw-semibold px-4 ">Categorie: <?= $results [0]['name'] ?></a>
     <hr>
     <p class= "fs-5">
-    <?= $results [0]['content'] ?>
+    <?= $results [0]['content'];?>
     </p>
     <a href="" class="btn btn-danger text-light fw-semibold px-4 ">Les tags utilisés:</a>
-    <p><?= $results [0]['tag'] ?></p>
+    <?php 
+        $arrayitemes= count($results);
+        for($i= 0; $i<$arrayitemes; $i++){?>
+            <p>#<?= $results [$i]['tag']; ?></p>
+            <?php }?>
+   
 
-    <a href="\" class=" text-dark fw-semibold  ">Retour à l'accueil</a>
+    <a href="\" class=" text-dark fw-semibold ">Retour à l'accueil</a>
 
 
     

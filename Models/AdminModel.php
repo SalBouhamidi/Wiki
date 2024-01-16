@@ -56,11 +56,11 @@ Class AdminModel{
      }
 
     public function update($table, $attributes, $values,$condition){
-        $arrtimploded= implode("`,`",$attributes );
-       
+        $arrtimploded= implode("`,`",$attributes );  
         $valuesimploded= implode("','",$values);
         $connect= $this->connectionobj->connexion();
-        $stmt= $connect->prepare("UPDATE `$table` SET `{$arrtimploded}`='{$valuesimploded}' WHERE {$condition}");    
+        $stmt= $connect->prepare("UPDATE `$table` SET `{$arrtimploded}`='{$valuesimploded}' WHERE {$condition}"); 
+      
         $stmt->execute();
         return $stmt;
      }

@@ -43,7 +43,13 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
         require "controllers/AddWikiController.php";
     }else if($uri === '/author/modify')
     {
-        require "controllers/ModifyWiki.php";
+        require "controllers/ModifyWikiController.php";
+    }else if($uri === '/author/logout')
+    {
+        require "controllers/Logout.php";
+    }else if($uri === '/admin/archiver')
+    {
+        require "controllers/ArchiverController.php";
     }
     else {
         pagenotfound();

@@ -15,7 +15,6 @@ Class WikiDetailsController extends Controller
 
     public function details(){
         $results= $this->getDetails();
-
         $this->renderview('wikidetails', ['results' => $results]);
     }
 

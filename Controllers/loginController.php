@@ -30,8 +30,8 @@ class LoginController extends Controller{
                  Please fill up the form before submitting
                 </div>
             <?php }else{
-                $email=$_POST['email'];
-                $pwd=$_POST['password'];
+                $email= $this->validationform($_POST['email']);
+                $pwd= $this->validationform($_POST['password']);
                 $checkobj= $this->modelobject->login("users","users.email = '$email'","users.pwd = '$pwd'");
                     
                 if($checkobj)
@@ -50,10 +50,7 @@ class LoginController extends Controller{
                     }else if($checkobj['id_role'] == 2)
                     {
                         header("location: /admin");
-                    }
-                    
-                    
-                   
+                    }  
                 }else
                 {
                     // $_SESSION['logged in'] = false;

@@ -21,7 +21,7 @@ ob_start();
             <div class="card-body">
                 <p class="card-title fw-bold">Title : <?= $result ["wiki_name"] ;?> </p>
                 <a href="<?= $uri = '/author'?>?id=<?php echo $result['id'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4 mb-4">Supprimer</a>
-                <a href="<?= $uri = '/author/modify'?>?id=<?php echo $result['id'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4 ">Modifier</a>
+                <a href="<?= $uri = 'author/modify'?>?id=<?php echo $result['id'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4 ">Modifier</a>
             </div>
         </div>
     <?php endforeach; ?>

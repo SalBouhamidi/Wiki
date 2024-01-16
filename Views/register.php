@@ -14,25 +14,24 @@
 <form method="post">
             <div class="mb-3 ">
                 <label for="exampleInputUsername" class="form-label text-light fw-semibold ">Author’s name</label>
-                <input type="text" name="name" class="form-control bg-body-secondary">
+                <input type="text" name="name" class="form-control bg-body-secondary" required>
             </div>
             <div class="mb-3 ">
                 <label for="exampleInputEmail1" class="form-label text-light fw-semibold">Email address</label>
-                <input type="email" name="email" class="form-control bg-body-secondary" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" name="email" class="form-control bg-body-secondary" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label text-light fw-semibold">Password</label>
-                <input type="password" name="pwd" class="form-control bg-body-secondary" id="exampleInputPassword1">
+                <input type="password" name="pwd" class="form-control bg-body-secondary" id="exampleInputPassword1" required>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label text-light fw-semibold">Reapet Password</label>
-                <input type="password" name="repeatpwd" class="form-control bg-body-secondary" id="exampleInputPassword1">
+                <input type="password" name="repeatpwd" class="form-control bg-body-secondary" id="exampleInputPassword1" required>
             </div>
             <div class="mb-3 ">
                 <label class="form-label text-light fw-semibold ">Role</label>
                 <select id="role" name="role" class="w-100 py-2 rounded border-none bg-body-secondary">
                     <option value="<?= 1?>">Author</option>
-                    <option value="<?= 2?>">Admin</option>
                 </select>
             </div>
             <div class="d-flex justify-content-center">

@@ -33,17 +33,20 @@ class RegistreController extends Controller
         if(isset($_POST['submit']))
         {
 
-            $name= $_POST['name'];
-            $email= $_POST['email'];
-            $pwd= $_POST['pwd'];
-            $repeatpwd= $_POST['repeatpwd'];
-            $role= $_POST['role'];
+            $name= $this->validationform($_POST['name']);
+            $email= $this->validationform($_POST['email']);
+            $pwd= $this->validationform($_POST['pwd']);
+            $repeatpwd= $this->validationform($_POST['repeatpwd']);
+            $role= $this->validationform($_POST['role']);
 
             $this->modelobj->RegisterRequete("users",["fullname","email","pwd","repeatpwd","id_role"],
             ["$name","$email", "$pwd","$repeatpwd","$role"]);
             
         }
     }
+
+
+
 
 }
 

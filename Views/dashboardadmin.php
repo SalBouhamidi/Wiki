@@ -46,7 +46,7 @@
                 <p class="card-title fw-bold">Title : <?= $wiki['wiki_name']; ?></p>
                 <p class="card-text fw-semibold">Author's name : <?= $wiki['fullname']; ?></p>
                 <a href="<?= $uri = '/wikidetails'?>?id=<?php echo $wiki['ASid'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4">Lire plus</a>
-                <a href="" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4">Archiver</a>
+                <a href="<?= $uri = '/admin/archiver'?>?id=<?php echo $wiki['ASid'];?>" class="btn btn-danger text-light d-flex justify-content-center w-75 ms-4">Archiver</a>
             </div>
         </div>
         <?php endforeach; ?>

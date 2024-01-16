@@ -5,6 +5,7 @@ require_once "./Models/AdminModel.php";
 
 Class Admincontroller extends Controller
 {
+    
     public $objModel;
 
     public function __construct(){
@@ -34,6 +35,8 @@ Class Admincontroller extends Controller
         $tags= $this->objModel->showElement('tag');
         return $tags;
     }
+
+
 
  
 
