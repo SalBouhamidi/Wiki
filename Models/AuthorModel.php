@@ -16,6 +16,8 @@ Class AuthorModel {
     {
         $connect= $this->connectionobj->connexion();
         $stmt= $connect->prepare("SELECT * FROM `{$table}` WHERE {$condition}");
+        // var_dump($stmt);
+        // die();
         $stmt->execute();
         $results = $stmt->fetchAll();
         return $results;
