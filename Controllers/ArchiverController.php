@@ -13,7 +13,8 @@ class ArchiverController extends Controller{
     public function archive(){
         $id= $_GET['id'];
         $results = $this->objModel->update('wiki',['archive'], [1], "id = $id");
-        $this-> renderview('/admin');
+        $this-> renderview('/dashboardadmin');
+        header('location: /');
        
     }
 
